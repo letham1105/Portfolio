@@ -1,0 +1,691 @@
+/* ----- POPPINS FONT Link ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ----- VARIABLES ----- */
+:root{
+    --body-color: rgb(250, 250, 250);
+    --color-white: rgb(255, 255, 255);
+
+    --text-color-second: rgb(68, 68, 68);
+    --text-color-third: rgb(25, 94, 17);
+
+    --first-color: rgb(134, 202, 132);
+    --first-color-hover: rgb(40, 91, 212);
+
+    --second-color: rgb(135, 193, 141);
+    --third-color: rgb(192, 166, 49);
+    --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+}
+
+/* ----- GLOBAL BUTTON DESIGN ----- */
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn>i{
+    margin-left: 10px;
+}
+.btn:hover {
+    background: var(--second-color);
+    color: var(--color-white);
+}
+/* ----- GLOBAL ICONS DESIGN ----- */
+i{
+    font-size: 16px;
+}
+
+/* ------- BASE -------- */
+body{
+    background: var(--body-color);
+}
+.container{
+    width: 100%;
+    position: relative;
+}
+
+/* ----- BASE -----*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ----- SMOOTH SCROLL ----- */
+html{
+    scroll-behavior: smooth;
+}
+/* ----- CHANGE THE SCROLL BAR DESIGN ----- */
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+::-webkit-scrollbar-track{
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
+
+/*--------NAV BAR-------*/
+nav{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90px;
+    line-height: 90px;
+    background: var(--body-color);
+    padding-inline: 9vw;
+    transition: .3s;
+    z-index: 100;
+}
+.nav-logo{
+    position: relative;
+}
+.nav-name{
+
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--text-color-third);
+}
+.nav-logo span{
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    font-size: 5em;
+    color: var(--text-color-second);
+}
+.nav-menu, .nav_menu_list{
+    display: flex;
+}
+.nav-menu .nav_list{
+    list-style: none;
+    position: relative;
+}
+.nav-link{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    padding-inline: 15px;
+    margin-inline: 20px;
+
+}
+.nav-menu-btn{
+    display: none;
+}
+.nav-menu-btn i{
+    font-size: 28px;
+    cursor: pointer;
+}
+.active-link{
+    position: relative;
+    color: var(--first-color);
+    transition: .3s;
+}
+.active-link::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: var(--first-color);
+    border-radius: 50%;
+}
+
+/* ----- MAIN BOX ----- */
+.section{
+    padding-block: 5em;
+    padding-inline: 9vh;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 50px;
+
+}
+.col{
+    display: flex;
+    width: 100%;
+}
+
+/* -- ## --- RESUABLE CSS -- ## -- */
+.top-header{
+    text-align: center;
+    margin-bottom: 5em;
+}
+.top-header h1{
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 20px;
+}
+.top-header span{
+    color: #999;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color-second);
+    margin-bottom: 15px;
+}
+
+/* ----- ABOUT INFO ----- */
+.about-info{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-block: 30px 70px;
+    padding-inline: 20px;
+    width: 100%;
+    background: var(--color-white);
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    border-radius: 20px;
+}
+.about-info img{
+    width: 180px; /* Điều chỉnh kích thước ảnh nhỏ hơn */
+    height: 180px; /* Điều chỉnh chiều cao ảnh nhỏ hơn */
+    border-radius: 50%; /* Làm cho ảnh tròn */
+    object-fit: cover; /* Đảm bảo nội dung ảnh vừa với khung hình tròn */
+    border: 2px solid var(--first-color); /* Thêm viền nếu muốn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng nếu cần */
+}
+.about-info p{
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+}
+
+/*--------SKILL BOX------*/
+.skill-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap:35px;
+    flex-wrap: wrap;
+}
+.skill-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
+    overflow: hidden;
+
+}
+.skill-box > i{
+    font-size: 50px;
+    color: #efefef;
+    margin-bottom: 25px;
+}
+.skill-box label{
+    font-size: 15px;
+    color: #777;
+}
+.skill-box::after, contact-info::after{
+    content: "";
+    position: absolute;
+    bottom: -100%;
+    background: var(--second-color);
+    width: 100%;
+    height: 100%;
+    transition: .4s;
+    z-index: 1;
+    padding-inline: 9vh;
+}
+.skill-box:hover.skill-box::after,
+.contact-info:hover.contact-info::after{
+    bottom: 0;
+}
+.skill-box:hover.skill-box i,
+.skill-box:hover.skill-box>h3,
+.skill-box:hover.skill-box>label{
+    color: var(--color-white);
+    z-index: 2;
+}
+.skill-box:nth-child(1) i {
+    color: #E34F26; /* Màu của icon HTML5 */
+}
+
+.skill-box:nth-child(2) i {
+    color: #1572B6; /* Màu của icon CSS3 */
+}
+
+.skill-box:nth-child(3) i {
+    color: #F7DF1E; /* Màu của icon JavaScript */
+}
+
+.skill-box:nth-child(4) i {
+    color: #68A063; /* Màu của icon Node.js */
+}
+.skill-box:nth-child(5) i {
+    color: #3672cc; /* Màu của icon Node.js */
+}
+.skill-box:nth-child(6) i {
+    color: #1d1dbc; /* Màu của icon Node.js */
+}
+/* ----- RECOMMENDATION ----- */
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Space between labels */
+    margin-bottom: 10px; /* Space between recommendations and form */
+}
+
+.recommendations label {
+    display: inline-block;
+    width: calc(33.33% - 20px); /* 3 items per row, subtracting for gap */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #86ca84;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-style: italic;
+    color: #555;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.recommendations label::before {
+    content: '“'; /* Open quote */
+    font-size: 24px;
+    color: #86ca84;
+    vertical-align: top;
+}
+
+.recommendations label::after {
+    content: '”'; /* Close quote */
+    font-size: 24px;
+    color: #86ca84;
+    vertical-align: bottom;
+}
+/* Enhanced Popup styling with green theme and checkmark icon */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #86ca84; /* Green background */
+    padding: 25px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-out; /* Smooth fade-in effect */
+    color: white;
+}
+
+.popup p {
+    margin: 0;
+    font-size: 18px; /* Larger font size */
+    font-weight: 500; /* Slightly bolder text */
+    text-align: center; /* Centered text */
+}
+
+/* Add an icon above the message */
+.popup .icon {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.popup .icon svg {
+    fill: white; /* Icon color */
+}
+
+/* Animation for the popup appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Optional: close button */
+.popup .close-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #87c18d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.popup .close-btn:hover {
+    background-color: #87c18d; /* Darker green on hover */
+}
+
+
+/* Animation for the popup appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Optional: close button */
+.popup .close-btn {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #86ca84;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.popup .close-btn:hover {
+    background-color: #87c18d; /* Darker green on hover */
+}
+
+
+/* ----- FORM STYLING ----- */
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between form fields */
+    width: 100%;
+}
+
+.form-inputs {
+    display: flex;
+    gap: 10px; /* Space between input fields */
+    width: 100%;
+}
+
+.input-field {
+    width: 50%;
+    height: 55px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding-inline: 20px;
+    outline: none;
+}
+
+textarea {
+    width: 100%;
+    height: 250px;
+    background: transparent;
+    border: 2px solid #AAA;
+    border-radius: 10px;
+    padding: 15px 20px;
+    outline: none;
+    resize: none;
+}
+
+.form-button > .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-color);
+    color: var(--color-white);
+    margin-top: 10px; /* Space between form and button */
+}
+
+.form-button > .btn:hover {
+    background: #00B5E7;
+}
+
+.form-button i {
+    font-size: 18px;
+    rotate: -45deg;
+}
+/* ----- PROJECTS SECTION ----- */
+#projects {
+    padding: 60px 0;
+    background-color: #f0f8ff; /* Light blue background */
+    text-align: center;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    align-items: start;
+    padding: 0 5%;
+}
+
+.project-item {
+    position: relative;
+    padding: 15px;
+    border-left: 4px solid #007BFF;
+    background-color: transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Light hover effect */
+    border-color: #0056b3;
+}
+
+.project-item h3 {
+    font-size: 20px;
+    color: #007BFF;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+.project-item .project-date {
+    font-size: 14px;
+    color: #777;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* ----- MEDIA QUERY FOR RESPONSIVENESS ----- */
+
+/* For smaller screens */
+@media only screen and (max-width: 600px) {
+    .project-container {
+        padding: 0 15px;
+    }
+
+    .project-item {
+        border-left: 3px solid #007BFF;
+    }
+
+    .project-item h3 {
+        font-size: 18px;
+    }
+
+    .project-item p {
+        font-size: 15px;
+    }
+}
+
+/* ----- FOOTER BOX ----- */
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #F8F8F8;
+    padding-block: 40px 60px;
+}
+.top-footer p{
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu{
+    display: flex;
+}
+.footer_menu_list{
+    list-style: none;
+}
+.footer_menu_list a{
+    text-decoration: none;
+    color: var(--text-color-second);
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.footer-social-icons{
+    display: flex;
+    gap: 30px;
+}
+.bottom-footer{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.middle-footer {
+    display: flex; /* Allows for flexible positioning */
+    justify-content: center; /* Center the footer content */
+}
+
+.footer-menu {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Arrange items in a row */
+    align-items: center; /* Vertically center items */
+}
+
+.footer_menu_list {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.footer_menu_list a {
+    color: #87c18d; /* Change this to your desired color */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Allow flex properties on anchor */
+    align-items: center; /* Center SVG with text */
+}
+
+.footer_menu_list svg {
+    width: 30px; /* Set width for the SVG */
+    height: 30px; /* Set height for the SVG */
+    margin-left: 5px; /* Space between text and SVG */
+    color: var(--text-color-second);
+}
+
+
+
+/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
+@media only screen and (max-width: 1024px){
+    .featured-text{
+        padding: 0;
+    }
+    .image, .image img{
+        width: 320px;
+        height: 320px;
+    }
+    .recommendations label {
+        width: calc(100% - 10px); /* 2 items per row on medium screens */
+    }
+}
+
+/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
+@media only screen and (max-width: 900px) {
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        left: 0;
+    }
+    .nav-menu{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(20px);
+        width: 100%;
+        min-height: 450px;
+        height: 90vh;
+        transition: .3s;
+    }
+    .nav_menu_list{
+        flex-direction: column;
+    }
+    .nav-menu-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .social_icons{
+        margin-top: 2em;
+    }
+    .image, .image img{
+        width: 150px;
+        height: 150px;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .about-info, .contact-info{
+        width: 100%;
+        height: auto;
+    }
+    .skill-container{
+        justify-content: center;
+    }
+    .skill-box{
+        width: 100%;
+    }
+
+
+}
+
+/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
+
+@media only screen and (max-width: 540px){
+
+    .skill-box{
+        width: 100%;
+    }
+    .form-inputs{
+        flex-direction: column;
+    }
+    .input-field{
+        width: 100%;
+    }
+}

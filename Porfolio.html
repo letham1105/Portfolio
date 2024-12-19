@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Le Thi Tham</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- ---------FONT AWESOME---------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="Portfolio.css">
+
+</head>
+<body>
+<div class="container">
+<!-------Header-------->
+<nav id="header">
+    <div class="nav-logo" >
+
+        <p class="nav-name">Le Tham</p>
+    </div>
+    <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+            <li class="nav_list">
+                <a href="#about" class="nav-link">About Me</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#skill" class="nav-link ">Skill</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#projects" class="nav-link ">Projects</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#recommendation" class="nav-link ">Recommendations</a>
+                <div class="circle"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+    </div>
+</nav>
+</div>
+<!---------ABOUT BOX------->
+<section class="section" id="about">
+    <div class="top-header">
+        <h1>About Me</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="about-info">
+                <img src="profile.jpg"  alt="image"/>
+                <h3>My Introduction</h3>
+                <p>I am a second-year IT student with a strong passion for Front-end development, yet I have a solid understanding of Back-end technologies as well. I’m constantly learning and expanding my knowledge of new frameworks and emerging technologies, including artificial intelligence, to build well-rounded and innovative solutions across the full stack.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-------SKILL-------->
+<section class="section" id="skill">
+    <div class="top-header">
+        <h1>Skill</h1>
+    </div>
+    <div class="skill-container">
+        <div class="skill-box">
+            <i class="fab fa-html5"></i>
+            <h3>HTML</h3>
+            <label>1 year experience</label>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-css3-alt"></i>
+            <h3>CSS</h3>
+            <label>1 year experience</label>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-js"></i>
+            <h3>Javascript</h3>
+            <label>1 year experience</label>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-node-js"></i>
+            <h3>Nodejs</h3>
+            <label>Beginner</label>
+        </div>
+        <div class="skill-box">
+            <i class="fas fa-database"></i>
+            <h3>MySQL</h3>
+            <label>1 year experience</label>
+        </div>
+        <div class="skill-box">
+            <i class="fab fa-php"></i>
+            <h3>PHP</h3>
+            <label>1 year experience</label>
+        </div>
+    </div>
+</section>
+<!-- -------------- PROJECT---------------- -->
+<section class="section" id="projects">
+    <div class="top-header">
+        <h1>Projects</h1>
+    </div>
+    <div class="project-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <h3>Tourism Management Website</h3>
+            <p>
+                A dynamic and user-friendly website designed to streamline tourism management. Built using PHP, this project features seamless navigation and efficient database handling powered by phpMyAdmin, ensuring a smooth experience for users.
+            </p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <h3>Clothing Store Website</h3>
+            <p>
+                An innovative e-commerce platform tailored for clothing businesses. With a robust backend built on Node.js and MongoDB, and a responsive frontend developed using React.js, it offers secure user authentication, streamlined payment processing via Stripe, and a modern shopping experience.
+            </p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+            <h3>Learn and Exam Java App</h3>
+            <p>
+                A comprehensive desktop application providing an interactive learning environment and a powerful testing platform for Java enthusiasts. Developed using Java Swing and structured with the MVC design pattern, it incorporates the DAO architecture for efficient data management.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- -------------- RECOMMENDATION ---------------- -->
+<section class="section" id="recommendation">
+    <div class="top-header">
+        <h1>Recommendations</h1>
+        <span>We Value Your Feedback!</span>
+    </div>
+    <div class="recommendation-container">
+        <!-- Pre-existing recommendations -->
+        <div class="recommendations">
+            <label readonly>Tham is a highly dedicated developer who delivered exceptional results on our project.</label>
+            <label readonly>Great communication and excellent understanding of front-end development. Highly recommend!</label>
+            <label readonly>Le Tham’s expertise in web design helped bring our vision to life with ease.</label>
+        </div>
+        <!-- Form to add new recommendation -->
+        <div class="form-control">
+            <div class="row">
+                <input type="text" id="name" class="input-field" placeholder="Your Name">
+                <input type="email" id="email" class="input-field" placeholder="Your Email">
+            </div>
+            <div class="text-area">
+                <textarea id="recommendation-text" placeholder="Leave a Recommendation"></textarea>
+            </div>
+            <div class="form-button">
+                <button id="recommend_btn"
+                        class="btn" onclick="addRecommendation()">Send <i class="uil uil-message"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup1">
+        <div class="icon">
+            <!-- Modern Checkmark SVG Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="50px">
+                <path fill-rule="evenodd" d="M10 18a1 1 0 01-.7-.3l-5-5a1 1 0 011.4-1.4l4.3 4.3 8.3-8.3a1 1 0 111.4 1.4l-9 9a1 1 0 01-.7.3z" clip-rule="evenodd"/>
+            </svg>
+        </div>
+        <p>Your recommendation has been submitted!</p>
+        <button class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+<!-- --------------- FOOTER --------------- -->
+<footer>
+    <div class="top-footer">
+        <p>Le Tham</p>
+    </div>
+    <div class="middle-footer">
+        <ul class="footer-menu">
+            <li class="footer_menu_list">
+                <a href="#about">About Me</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#skill">Skill</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#recommendation">Recommendation</a>
+            </li>
+            <!-- Thêm biểu tượng trang chủ -->
+            <li class="nav_list">
+                <a href="#about" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#87c18d" viewBox="0 0 24 24" stroke="black" width="30px">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-social-icons">
+        <a class="icon" href="https://www.instagram.com/th_thm_205/" target="_blank" rel="noopener noreferrer">
+            <i class="uil uil-instagram"></i>
+        </a>
+        <a class="icon" href="https://www.linkedin.com/in/tham-le-423270218/" target="_blank" rel="noopener noreferrer">
+            <i class="uil uil-linkedin-alt"></i>
+        </a>
+        <a class="icon" href="https://github.com/letham1105" target="_blank" rel="noopener noreferrer">
+            <i class="uil uil-github-alt"></i>
+        </a>
+    </div>
+
+    <div class="bottom-footer">
+
+    </div>
+</footer>
+<!-- Popup for confirmation -->
+<div id="popup" style="display: none;">
+    <p>Thank you for your recommendation!</p>
+</div>
+<!-- ----- TYPING JS Link ----- -->
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<!-- ----- SCROLL REVEAL JS Link----- -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="Portfolio.js"></script>
+
+</body>
+</html>
